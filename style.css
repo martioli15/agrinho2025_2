@@ -1,0 +1,131 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #5cb85c; /* Verde que remete ao campo */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Para conter o float */
+}
+
+.campo {
+    background-image: url('https://images.unsplash.com/photo-1517849845537-4d17301fc540?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Substitua pela sua imagem de campo */
+    background-size: cover;
+    color: white;
+}
+
+.cidade {
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d1202a9c2313?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Substitua pela sua imagem de cidade */
+    background-size: cover;
+    color: white;
+}
+
+.conteudo {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhor leitura do texto sobre a imagem */
+    border-radius: 8px;
+}
+
+.conteudo h2 {
+    margin-top: 0;
+}
+
+.conteudo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.conteudo li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.conteudo li::before {
+    content: "✓"; /* Ou outro ícone */
+    position: absolute;
+    left: 0;
+    color: #5cb85c; /* Verde para o campo, pode ajustar para a cidade */
+}
+
+.campo .conteudo li::before {
+    color: #aaff80; /* Um verde mais claro para o campo */
+}
+
+.cidade .conteudo li::before {
+    color: #428bca; /* Um azul que remete à modernidade da cidade */
+}
+
+.botao {
+    display: inline-block;
+    background-color: #5cb85c; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.cidade .botao {
+    background-color: #428bca; /* Azul */
+}
+
+.botao:hover {
+    opacity: 0.8;
+}
+
+.conexao {
+    background-color: #eee;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos responsivos (opcional) */
+@media (min-width: 768px) {
+    section {
+        display: flex;
+        align-items: center;
+        min-height: 300px;
+    }
+
+    .campo .conteudo,
+    .cidade .conteudo {
+        width: 50%;
+        padding: 30px;
+    }
+
+    .campo .conteudo {
+        order: 2; /* Conteúdo do campo à direita em telas maiores */
+    }
+}
